@@ -1,5 +1,6 @@
 import 'package:eleicoes/entities/enums/rotas.dart';
 import 'package:eleicoes/entities/enums/tipo_de_eleicao.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PaginaAdicionarEleicao extends StatefulWidget {
@@ -24,7 +25,7 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.add_task, size: 200.00, color: Colors.indigo),
+            const Icon(Icons.add_task, size: 200.00, color: Colors.indigo),
             const Padding(
               padding: EdgeInsets.all(20),
               child: Text("Vamos começar pela categoria da eleição:"),
@@ -69,8 +70,16 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            {Navigator.pushNamed(context, Rota.adicionarCandidato.name)},
+        onPressed: () => {
+          setState(() {
+            switch (_tipoDeEleicao) {
+              case TipoDeEleicao.federal:
+                Navigator.pushNamed(
+                    context, Rota.adicionarDeputadoFederal.name);
+                break;
+            }
+          }),
+        },
         tooltip: "Avançar",
         child: const Icon(Icons.navigate_next),
       ),

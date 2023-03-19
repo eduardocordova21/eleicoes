@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PaginaAdicionarCandidato extends StatefulWidget {
-  const PaginaAdicionarCandidato({Key? key}) : super(key: key);
+class PaginaAdicionarDeputadoFederal extends StatefulWidget {
+  const PaginaAdicionarDeputadoFederal({Key? key}) : super(key: key);
 
   @override
-  State<PaginaAdicionarCandidato> createState() =>
+  State<PaginaAdicionarDeputadoFederal> createState() =>
       _PaginaAdicionarCandidatoState();
 }
 
-class _PaginaAdicionarCandidatoState extends State<PaginaAdicionarCandidato> {
+class _PaginaAdicionarCandidatoState extends State<PaginaAdicionarDeputadoFederal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
