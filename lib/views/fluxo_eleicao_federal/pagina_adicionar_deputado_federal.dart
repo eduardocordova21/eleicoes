@@ -1,3 +1,4 @@
+import 'package:eleicoes/widgets/validacao_do_candidato.dart';
 import 'package:flutter/material.dart';
 
 import '../../entities/enums/rotas.dart';
@@ -51,8 +52,18 @@ class _PaginaAdicionarDeputadoFederalState
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            {Navigator.pushNamed(context, Rota.adicionarSenador.name)},
+        onPressed: () => {
+
+
+
+          showModalBottomSheet<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return const ValidacaoDoCandidato();
+            },
+          )
+          //Navigator.pushNamed(context, Rota.adicionarSenador.name)
+        },
         tooltip: "Avançar",
         child: const Icon(Icons.navigate_next),
       ),
