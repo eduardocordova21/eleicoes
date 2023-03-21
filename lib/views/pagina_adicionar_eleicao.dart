@@ -28,7 +28,10 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
             const Icon(Icons.add_task, size: 200.00, color: Colors.indigo),
             const Padding(
               padding: EdgeInsets.all(20),
-              child: Text("Vamos começar pela categoria da eleição:"),
+              child: Text(
+                "Vamos começar pela categoria da eleição:",
+                style: TextStyle(fontSize: 18),
+              ),
             ),
             ListTile(
               title: Text(TipoDeEleicao.federal.name.toUpperCase()),

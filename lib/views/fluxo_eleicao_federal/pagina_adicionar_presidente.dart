@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../entities/enums/rotas.dart';
-
-class PaginaAdicionarDeputadoFederal extends StatefulWidget {
-  const PaginaAdicionarDeputadoFederal({Key? key}) : super(key: key);
+class PaginaAdicionarPresidente extends StatefulWidget {
+  const PaginaAdicionarPresidente({Key? key}) : super(key: key);
 
   @override
-  State<PaginaAdicionarDeputadoFederal> createState() =>
-      _PaginaAdicionarDeputadoFederalState();
+  State<PaginaAdicionarPresidente> createState() => _PaginaAdicionarPresidenteState();
 }
 
-class _PaginaAdicionarDeputadoFederalState
-    extends State<PaginaAdicionarDeputadoFederal> {
+class _PaginaAdicionarPresidenteState extends State<PaginaAdicionarPresidente> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,12 +20,12 @@ class _PaginaAdicionarDeputadoFederalState
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Icon(Icons.supervised_user_circle,
+            Icon(Icons.person_pin,
                 size: 200.00, color: Colors.indigo),
             Padding(
               padding: EdgeInsets.all(30),
               child: Text(
-                "Deputado Federal",
+                "Presidente",
                 style: TextStyle(fontSize: 18),
               ),
             ),
@@ -38,21 +34,20 @@ class _PaginaAdicionarDeputadoFederalState
               child: TextField(
                 textAlign: TextAlign.center,
                 keyboardType: TextInputType.number,
-                maxLength: 4,
+                maxLength: 2,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20))),
                 ),
                 style:
-                    TextStyle(fontWeight: FontWeight.bold, letterSpacing: 20.0),
+                TextStyle(fontWeight: FontWeight.bold, letterSpacing: 20.0),
               ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            {Navigator.pushNamed(context, Rota.adicionarSenador.name)},
+        onPressed: () => {},
         tooltip: "Avançar",
         child: const Icon(Icons.navigate_next),
       ),

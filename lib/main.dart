@@ -1,4 +1,6 @@
 import 'package:eleicoes/views/fluxo_eleicao_federal/pagina_adicionar_deputado_federal.dart';
+import 'package:eleicoes/views/fluxo_eleicao_federal/pagina_adicionar_presidente.dart';
+import 'package:eleicoes/views/fluxo_eleicao_federal/pagina_adicionar_senador.dart';
 import 'package:eleicoes/views/pagina_adicionar_eleicao.dart';
 import 'package:eleicoes/views/pagina_lista_de_eleicoes.dart';
 import 'package:eleicoes/entities/enums/rotas.dart';
@@ -23,7 +25,11 @@ class MyApp extends StatelessWidget {
       routes: {
         Rota.home.name: (context) => const PaginaListaDeEleicoes(),
         Rota.adicionarEleicao.name: (context) => const PaginaAdicionarEleicao(),
-        Rota.adicionarDeputadoFederal.name: (context) => const PaginaAdicionarDeputadoFederal(),
+        Rota.adicionarDeputadoFederal.name: (context) =>
+            const PaginaAdicionarDeputadoFederal(),
+        Rota.adicionarSenador.name: (context) => const PaginaAdicionarSenador(),
+        Rota.adicionarPresidente.name: (context) =>
+            const PaginaAdicionarPresidente(),
       },
     );
   }
