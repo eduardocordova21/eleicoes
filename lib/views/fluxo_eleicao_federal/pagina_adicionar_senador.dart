@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../entities/enums/rotas.dart';
+import '../../models/enums/rotas.dart';
 
 class PaginaAdicionarSenador extends StatefulWidget {
   const PaginaAdicionarSenador({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
-import 'package:eleicoes/entities/Eleicao.dart';
-import 'package:eleicoes/entities/enums/rotas.dart';
-import 'package:eleicoes/services/eleicoes_service.dart';
+import 'package:eleicoes/models/Eleicao.dart';
+import 'package:eleicoes/models/enums/rotas.dart';
+import 'package:eleicoes/repository/eleicoes_repository.dart';
 import 'package:flutter/material.dart';
 
 class PaginaListaDeEleicoes extends StatefulWidget {
@@ -11,7 +11,7 @@ class PaginaListaDeEleicoes extends StatefulWidget {
 }
 
 class _PaginaListaDeEleicoesState extends State<PaginaListaDeEleicoes> {
-  List<Eleicao> eleicoes = EleicoesService.getEleicoes();
+  List<Eleicao> eleicoes = EleicoesRepository.getEleicoes();
 
   @override
   Widget build(BuildContext context) {

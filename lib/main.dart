@@ -3,7 +3,7 @@ import 'package:eleicoes/views/fluxo_eleicao_federal/pagina_adicionar_presidente
 import 'package:eleicoes/views/fluxo_eleicao_federal/pagina_adicionar_senador.dart';
 import 'package:eleicoes/views/pagina_adicionar_eleicao.dart';
 import 'package:eleicoes/views/pagina_lista_de_eleicoes.dart';
-import 'package:eleicoes/entities/enums/rotas.dart';
+import 'package:eleicoes/models/enums/rotas.dart';
 import 'package:flutter/material.dart';
 
 void main() {

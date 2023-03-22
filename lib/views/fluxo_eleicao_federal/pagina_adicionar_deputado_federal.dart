@@ -1,7 +1,7 @@
 import 'package:eleicoes/widgets/validacao_do_candidato.dart';
 import 'package:flutter/material.dart';
 
-import '../../entities/enums/rotas.dart';
+import '../../models/enums/rotas.dart';
 
 class PaginaAdicionarDeputadoFederal extends StatefulWidget {
   const PaginaAdicionarDeputadoFederal({Key? key}) : super(key: key);

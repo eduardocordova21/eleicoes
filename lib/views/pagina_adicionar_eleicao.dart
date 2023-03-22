@@ -1,5 +1,5 @@
-import 'package:eleicoes/entities/enums/rotas.dart';
-import 'package:eleicoes/entities/enums/tipo_de_eleicao.dart';
+import 'package:eleicoes/models/enums/rotas.dart';
+import 'package:eleicoes/models/enums/tipo_de_eleicao.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

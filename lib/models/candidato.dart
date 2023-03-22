@@ -1,4 +1,4 @@
-import 'package:eleicoes/entities/enums/cargo.dart';
+import 'package:eleicoes/models/enums/cargo.dart';
 
 class Candidato {
   String nome;

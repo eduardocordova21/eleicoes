@@ -1,5 +1,5 @@
-import 'package:eleicoes/entities/candidato.dart';
-import 'package:eleicoes/entities/enums/tipo_de_eleicao.dart';
+import 'package:eleicoes/models/candidato.dart';
+import 'package:eleicoes/models/enums/tipo_de_eleicao.dart';
 
 class Eleicao{
   TipoDeEleicao tipoDeEleicao;
