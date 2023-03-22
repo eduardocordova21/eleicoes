@@ -1,7 +1,7 @@
-import 'package:eleicoes/entities/candidato.dart';
-import 'package:eleicoes/entities/enums/cargo.dart';
+import 'package:eleicoes/models/candidato.dart';
+import 'package:eleicoes/models/enums/cargo.dart';
 
-class CandidatosService {
+class CandidatosRepository {
   static List<Candidato> getCandidatos() {
     final candidatos = <Candidato>[];
 
