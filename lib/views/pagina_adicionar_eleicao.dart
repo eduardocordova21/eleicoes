@@ -1,7 +1,10 @@
 import 'package:eleicoes/models/enums/rotas.dart';
 import 'package:eleicoes/models/enums/tipo_de_eleicao.dart';
+import 'package:eleicoes/repository/eleicoes_repository.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../models/Eleicao.dart';
 
 class PaginaAdicionarEleicao extends StatefulWidget {
   const PaginaAdicionarEleicao({Key? key}) : super(key: key);
@@ -11,7 +14,20 @@ class PaginaAdicionarEleicao extends StatefulWidget {
 }
 
 class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
+  late Future<List<Eleicao>> eleicoes;
+  late int quantidadeDeEleicoes = 0;
   TipoDeEleicao? _tipoDeEleicao = TipoDeEleicao.federal;
+
+  @override
+  void initState() {
+    super.initState();
+
+    eleicoes = EleicoesRepository().obterEleicoes();
+
+    setState(() {
+      eleicoes.then((value) => {quantidadeDeEleicoes = value.length});
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,52 +39,30 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Icon(Icons.add_task, size: 200.00, color: Colors.indigo),
+            const Padding(
+              padding: EdgeInsets.all(20),
+              child: Icon(Icons.add_task, size: 100.00, color: Colors.indigo),
+            ),
             const Padding(
               padding: EdgeInsets.all(20),
               child: Text(
-                "Vamos começar pela categoria da eleição:",
+                "Vamos começar selecionando a eleição:",
                 style: TextStyle(fontSize: 18),
               ),
             ),
-            ListTile(
-              title: Text(TipoDeEleicao.federal.name.toUpperCase()),
-              leading: Radio<TipoDeEleicao>(
-                value: TipoDeEleicao.federal,
-                groupValue: _tipoDeEleicao,
-                onChanged: (TipoDeEleicao? value) {
-                  setState(() {
-                    _tipoDeEleicao = value;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              title: Text(TipoDeEleicao.estadual.name.toUpperCase()),
-              leading: Radio<TipoDeEleicao>(
-                value: TipoDeEleicao.estadual,
-                groupValue: _tipoDeEleicao,
-                onChanged: (TipoDeEleicao? value) {
-                  setState(() {
-                    _tipoDeEleicao = value;
-                  });
-                },
-              ),
-            ),
-            ListTile(
-              title: Text(TipoDeEleicao.municipal.name.toUpperCase()),
-              leading: Radio<TipoDeEleicao>(
-                value: TipoDeEleicao.municipal,
-                groupValue: _tipoDeEleicao,
-                onChanged: (TipoDeEleicao? value) {
-                  setState(() {
-                    _tipoDeEleicao = value;
-                  });
-                },
-              ),
-            ),
+            FutureBuilder<List<Eleicao>>(
+                future: eleicoes,
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return Text(snapshot.data!.toString());
+                  } else if (snapshot.hasError) {
+                    return Text('${snapshot.error}');
+                  }
+
+                  return const CircularProgressIndicator();
+                })
           ],
         ),
       ),

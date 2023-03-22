@@ -11,7 +11,7 @@ class PaginaListaDeEleicoes extends StatefulWidget {
 }
 
 class _PaginaListaDeEleicoesState extends State<PaginaListaDeEleicoes> {
-  List<Eleicao> eleicoes = EleicoesRepository.getEleicoes();
+  List<Eleicao> eleicoes = [];
 
   @override
   Widget build(BuildContext context) {
@@ -45,16 +45,10 @@ class _PaginaListaDeEleicoesState extends State<PaginaListaDeEleicoes> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                    eleicoes[index]
-                                        .tipoDeEleicao
-                                        .name
-                                        .toUpperCase(),
+                                    "TESTE",
                                     style: const TextStyle(
                                         fontWeight: FontWeight.bold)),
-                                Text(eleicoes[index]
-                                    .anoDaEleicao
-                                    .year
-                                    .toString()),
+                                Text("2022"),
                               ],
                             ),
                             const Icon(Icons.edit,
