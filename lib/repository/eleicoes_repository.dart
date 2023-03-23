@@ -10,8 +10,13 @@ class EleicoesRepository {
     final resposta = await http.get(Uri.parse(urlEleicoesOrdinarias));
 
     if (resposta.statusCode == 200) {
-      var dadosEmJson = jsonDecode(resposta.body);
-      List<Eleicao> listaDeEleicoes = List.from(dadosEmJson);
+      List<dynamic> listaDeObjetos = jsonDecode(resposta.body);
+      List<Eleicao> listaDeEleicoes = [];
+
+      for (var eleicao in listaDeObjetos) {
+        listaDeEleicoes.add(Eleicao.fromJson(eleicao));
+      }
+
       return listaDeEleicoes;
     } else {
       throw Exception("RUN BITCH, RUUUUUUN!");
