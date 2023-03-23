@@ -20,7 +20,6 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
   @override
   void initState() {
     super.initState();
-
     eleicoes = EleicoesRepository().obterEleicoes();
   }
 
