@@ -15,7 +15,6 @@ class PaginaAdicionarEleicao extends StatefulWidget {
 
 class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
   late Future<List<Eleicao>> eleicoes;
-  late int quantidadeDeEleicoes = 0;
   TipoDeEleicao? _tipoDeEleicao = TipoDeEleicao.federal;
 
   @override
@@ -23,10 +22,6 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
     super.initState();
 
     eleicoes = EleicoesRepository().obterEleicoes();
-
-    setState(() {
-      eleicoes.then((value) => {quantidadeDeEleicoes = value.length});
-    });
   }
 
   @override
@@ -56,7 +51,14 @@ class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
                 future: eleicoes,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
-                    return Text(snapshot.data!.toString());
+                    return ListView.builder(
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          return Text(
+                            snapshot.data![index].descricaoEleicao!,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          );
+                        });
                   } else if (snapshot.hasError) {
                     return Text('${snapshot.error}');
                   }

@@ -15,18 +15,18 @@ class Eleicao {
 
   Eleicao(
       {this.id,
-        this.siglaUF,
-        this.localidadeSgUe,
-        this.ano,
-        this.codigo,
-        this.nomeEleicao,
-        this.tipoEleicao,
-        this.turno,
-        this.tipoAbrangencia,
-        this.dataEleicao,
-        this.codSituacaoEleicao,
-        this.descricaoSituacaoEleicao,
-        this.descricaoEleicao});
+      this.siglaUF,
+      this.localidadeSgUe,
+      this.ano,
+      this.codigo,
+      this.nomeEleicao,
+      this.tipoEleicao,
+      this.turno,
+      this.tipoAbrangencia,
+      this.dataEleicao,
+      this.codSituacaoEleicao,
+      this.descricaoSituacaoEleicao,
+      this.descricaoEleicao});
 
   Eleicao.fromJson(Map<String, dynamic> json) {
     id = json['id'];
