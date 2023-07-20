@@ -1,6 +1,5 @@
 import 'package:eleicoes/models/Eleicao.dart';
 import 'package:eleicoes/models/enums/rotas.dart';
-import 'package:eleicoes/repository/eleicoes_repository.dart';
 import 'package:flutter/material.dart';
 
 class PaginaListaDeEleicoes extends StatefulWidget {
@@ -35,8 +34,8 @@ class _PaginaListaDeEleicoesState extends State<PaginaListaDeEleicoes> {
                     color: const Color.fromRGBO(246, 242, 249, 1.0),
                     elevation: 5,
                     margin: const EdgeInsets.all(15),
-                    child: Padding(
-                        padding: const EdgeInsets.all(20),
+                    child: const Padding(
+                        padding: EdgeInsets.all(20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -46,12 +45,12 @@ class _PaginaListaDeEleicoesState extends State<PaginaListaDeEleicoes> {
                               children: [
                                 Text(
                                     "TESTE",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontWeight: FontWeight.bold)),
                                 Text("2022"),
                               ],
                             ),
-                            const Icon(Icons.edit,
+                            Icon(Icons.edit,
                                 color: Colors.indigo, size: 30)
                           ],
                         )),

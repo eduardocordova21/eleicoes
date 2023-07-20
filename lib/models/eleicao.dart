@@ -45,20 +45,20 @@ class Eleicao {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['siglaUF'] = this.siglaUF;
-    data['localidadeSgUe'] = this.localidadeSgUe;
-    data['ano'] = this.ano;
-    data['codigo'] = this.codigo;
-    data['nomeEleicao'] = this.nomeEleicao;
-    data['tipoEleicao'] = this.tipoEleicao;
-    data['turno'] = this.turno;
-    data['tipoAbrangencia'] = this.tipoAbrangencia;
-    data['dataEleicao'] = this.dataEleicao;
-    data['codSituacaoEleicao'] = this.codSituacaoEleicao;
-    data['descricaoSituacaoEleicao'] = this.descricaoSituacaoEleicao;
-    data['descricaoEleicao'] = this.descricaoEleicao;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['siglaUF'] = siglaUF;
+    data['localidadeSgUe'] = localidadeSgUe;
+    data['ano'] = ano;
+    data['codigo'] = codigo;
+    data['nomeEleicao'] = nomeEleicao;
+    data['tipoEleicao'] = tipoEleicao;
+    data['turno'] = turno;
+    data['tipoAbrangencia'] = tipoAbrangencia;
+    data['dataEleicao'] = dataEleicao;
+    data['codSituacaoEleicao'] = codSituacaoEleicao;
+    data['descricaoSituacaoEleicao'] = descricaoSituacaoEleicao;
+    data['descricaoEleicao'] = descricaoEleicao;
     return data;
   }
 }

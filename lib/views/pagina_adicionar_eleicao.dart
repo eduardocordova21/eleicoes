@@ -1,7 +1,6 @@
 import 'package:eleicoes/models/enums/rotas.dart';
 import 'package:eleicoes/models/enums/tipo_de_eleicao.dart';
 import 'package:eleicoes/repository/eleicoes_repository.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../models/Eleicao.dart';
@@ -15,7 +14,7 @@ class PaginaAdicionarEleicao extends StatefulWidget {
 
 class _PaginaAdicionarEleicaoState extends State<PaginaAdicionarEleicao> {
   late Future<List<Eleicao>> eleicoes;
-  TipoDeEleicao? _tipoDeEleicao = TipoDeEleicao.federal;
+  final TipoDeEleicao _tipoDeEleicao = TipoDeEleicao.federal;
 
   @override
   void initState() {

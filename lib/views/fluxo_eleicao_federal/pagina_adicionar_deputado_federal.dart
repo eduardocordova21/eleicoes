@@ -1,7 +1,6 @@
 import 'package:eleicoes/widgets/validacao_do_candidato.dart';
 import 'package:flutter/material.dart';
 
-import '../../models/enums/rotas.dart';
 
 class PaginaAdicionarDeputadoFederal extends StatefulWidget {
   const PaginaAdicionarDeputadoFederal({Key? key}) : super(key: key);
@@ -20,11 +19,11 @@ class _PaginaAdicionarDeputadoFederalState
         title: const Text("Adicionar candidato"),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Icon(Icons.supervised_user_circle,
                 size: 200.00, color: Colors.indigo),
             Padding(

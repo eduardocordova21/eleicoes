@@ -17,11 +17,11 @@ class _PaginaAdicionarSenadorState extends State<PaginaAdicionarSenador> {
         title: const Text("Adicionar candidato"),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Icon(Icons.supervised_user_circle_outlined,
                 size: 200.00, color: Colors.indigo),
             Padding(
