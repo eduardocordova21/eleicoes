@@ -1,5 +1,4 @@
 import 'package:eleicoes/models/Eleicao.dart';
-import 'package:eleicoes/models/enums/rotas.dart';
 import 'package:flutter/material.dart';
 
 class PaginaListaDeEleicoes extends StatefulWidget {
@@ -43,27 +42,19 @@ class _PaginaListaDeEleicoesState extends State<PaginaListaDeEleicoes> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                    "TESTE",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold)),
+                                Text("TESTE",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold)),
                                 Text("2022"),
                               ],
                             ),
-                            Icon(Icons.edit,
-                                color: Colors.indigo, size: 30)
+                            Icon(Icons.edit, color: Colors.indigo, size: 30)
                           ],
                         )),
                   ),
                 );
               },
             ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            {Navigator.pushNamed(context, Rota.adicionarEleicao.name)},
-        tooltip: 'Adicionar Eleição',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

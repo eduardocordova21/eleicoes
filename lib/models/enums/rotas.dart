@@ -1,5 +1,5 @@
 enum Rota {
-  home,
+  paginaPrincipal,
   adicionarEleicao,
   adicionarDeputadoFederal,
   adicionarSenador,
