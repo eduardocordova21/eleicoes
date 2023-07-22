@@ -18,14 +18,25 @@ class _FormAdicionarEleicaoWidgetState
       key: _formKey,
       child: Column(
         children: [
-          DropdownButtonFormField(
-            items: const <DropdownMenuItem>[
-              DropdownMenuItem(
-                child: Text("2022"),
-              )
-            ],
-            onChanged: (e) => {},
-          ),
+          Padding(
+            padding: const EdgeInsets.all(50),
+            child: DropdownButtonFormField(
+              items: const <DropdownMenuItem>[
+                DropdownMenuItem(
+                  value: 2022,
+                  child: Text("2022"),
+                ),
+                DropdownMenuItem(
+                  value: 2021,
+                  child: Text("2021"),
+                ),
+              ],
+              onChanged: (e) => {},
+              borderRadius: BorderRadius.circular(10),
+              icon: const Icon(Icons.calendar_month),
+              hint: const Text("Ano Eleitoral"),
+            ),
+          )
         ],
       ),
     );
