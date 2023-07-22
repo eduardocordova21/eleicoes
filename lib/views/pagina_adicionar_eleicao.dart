@@ -1,7 +1,7 @@
-import 'package:eleicoes/widgets/form_adicionar_eleicao.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/app_bar_custom.dart';
+import '../widgets/app_bar_custom_widget.dart';
+import '../widgets/form_adicionar_eleicao_widget.dart';
 
 class PaginaAdicionarEleicao extends StatelessWidget {
   const PaginaAdicionarEleicao({Key? key}) : super(key: key);
@@ -9,8 +9,8 @@ class PaginaAdicionarEleicao extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: AppBarCustom(title: "Adicionar uma Eleição"),
-      body: FormAdicionarEleicao(),
+      appBar: AppBarCustomWidget(title: "Adicionar uma Eleição"),
+      body: FormAdicionarEleicaoWidget(),
     );
   }
 }

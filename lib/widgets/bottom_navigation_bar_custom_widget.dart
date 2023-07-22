@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import '../views/pagina_adicionar_eleicao.dart';
 import '../views/pagina_lista_de_eleicoes.dart';
 
-class BottomNavigationBarCustom extends StatefulWidget {
-  const BottomNavigationBarCustom({super.key});
+class BottomNavigationBarCustomWidget extends StatefulWidget {
+  const BottomNavigationBarCustomWidget({super.key});
 
   @override
-  State<BottomNavigationBarCustom> createState() =>
-      _BottomNavigationBarCustomState();
+  State<BottomNavigationBarCustomWidget> createState() =>
+      _BottomNavigationBarCustomWidgetState();
 }
 
-class _BottomNavigationBarCustomState extends State<BottomNavigationBarCustom> {
+class _BottomNavigationBarCustomWidgetState
+    extends State<BottomNavigationBarCustomWidget> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetPages = <Widget>[

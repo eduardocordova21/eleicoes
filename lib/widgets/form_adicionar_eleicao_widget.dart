@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class FormAdicionarEleicao extends StatefulWidget {
-  const FormAdicionarEleicao({super.key});
+class FormAdicionarEleicaoWidget extends StatefulWidget {
+  const FormAdicionarEleicaoWidget({super.key});
 
   @override
-  State<FormAdicionarEleicao> createState() => _FormAdicionarEleicaoState();
+  State<FormAdicionarEleicaoWidget> createState() =>
+      _FormAdicionarEleicaoWidgetState();
 }
 
-class _FormAdicionarEleicaoState extends State<FormAdicionarEleicao> {
+class _FormAdicionarEleicaoWidgetState
+    extends State<FormAdicionarEleicaoWidget> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
